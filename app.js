@@ -17,8 +17,14 @@ app.use('/blog', blog)
 app.use('/user', user)
 
 
+
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the blog API')
+});
+
 app.use(errorhandler)
 
 app.listen(PORT, ()=> {
     console.log(`listening on port ${PORT}`)
-})
+});

@@ -4,7 +4,7 @@ const { UserToken , attachedUser } = require('../authentication/auth')
 const {pagination} = require('../middlewares/pages')
 
 
-router.route('/')
+router.route('/blogs')
   .get(pagination, blogcontroller.getBlogs)
   .post(UserToken, blogcontroller.createBlog)
 
